@@ -1,0 +1,97 @@
+<html>
+	<head>
+		<title>REGISTRATION PAGE</title>
+		<style>
+			body{
+				background-image:url(images/plain5.jpg);
+				background-width:200%;
+				background-repeat:no-repeat;
+				background-position:center;
+				height:200%;
+				width=100%;
+				background-opacity=0.2;
+			}
+			#main{
+			}
+		</style>
+		<script type="text/javascript">
+			function f()
+			{
+				var a=document.form.user.value;
+				var b=document.form.pwd.value;
+				var c=document.form.name.value;
+				var d=document.form.number.value;
+				if(/^[a-z ]+$/i.test(c)!=1)
+				{
+					alert('Username can only contain letters!')
+					return false;
+				}
+				if(a==null||a==""||b==null||b=="")
+				{
+					alert('Required fields cannot be empty');
+					return false;
+				}
+				if(b.length<8)
+				{
+					alert('Password too short');
+					return false;
+				}
+				var first=a.charAt(0);
+				if(first>=0 && first<=9)
+				{
+					alert('Username should start with a character!');
+					return false;
+				}
+				if(d.length!=10)
+				{
+					alert("Incorrect mobile number");\
+					return false;
+				}
+				{
+					alert('Username should start with a character!');
+					return false;
+				}
+				if(confirm('Are you sure you want to submit?'))
+				{
+					return true;
+				}
+				else
+				{
+					return false;
+				}
+				
+			}		
+			function f1()
+			{
+				document.getElementById("main").style.opacity="0.1";
+				document.getElementById("main").style.opacity="0.2";
+				document.getElementById("para").innerHTML="";
+			}
+		</script>
+	</head>
+	<body>
+		<h1 style="font-family:Times new roman; font-size:40; color:#134AF5; text-shadow: 2px 2px #ff0000"><center>REGISTRATION FORM</center></h1>
+		<div id="main">
+		<div id="first" style="font-family:Times new roman; font-size:30; color:#134AF5; text-shadow: 2px 2px brown; opacity:0.8">&nbsp</nbsp>Enter your details:</div>
+		<center>
+			<form name="form" action="loginPage.html" onSubmit="return f()" method="post" style="font-family:Times new roman; font-size:20; color:#134AF5; text-shadow: 2px 2px crimson"/>
+			<fieldset height="300px" width="300px">
+			<legend>REGISTER</legend>
+				NAME: <input name="name" type="name" placeholder="name" style="font-family:Times new roman; font-size:30; color:#134AF5"/><br/><br/>
+				USERNAME: <input name="user" type="text" placeholder="username" style="font-family:Times new roman; font-size:30; color:#134AF5"/><br/><br/>
+				PASSWORD: <input name="pwd" type="password" placeholder="********" style="font-family:Times new roman; font-size:30; color:#134AF5"/><br/><br/>
+				GENDER: <style="font-family:Times new roman; font-size:20; color:#134AF5"/>
+  				<input type="radio" name="gender" id="male" value="male">
+				<label for="male"> Male </label>
+  				<input type="radio" name="gender" id="female" value="female">
+  				<label for="female"> Female </label><br/><br/>
+				EMAIL ID: <input name="email" type="emailid" placeholder="abc@xyz.com" style="font-family:Times new roman; font-size:30; color:#F6456D"/><br/><br/>
+				MOBILE NO: <input name="number" type="mobile" placeholder="**********" style="font-family:Times new roman; font-size:30; color:#134AF5"/><br/><br/>
+			<center><input value="Submit" style="font-family:Times new roman; font-size:30; color:#134AF5; text-shadow: 2px 2px crimson" type="Submit" name="Submit"/></center>
+			</fieldset>
+			</form>
+			<a href="loginPage.html" style="font-family:Times new roman; font-size:20; color:#134AF5; text-shadow: 2px 2px pink">Already have an account? Login!</a>
+		</center>
+		</div>
+	</body>
+</html>

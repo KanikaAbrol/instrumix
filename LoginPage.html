@@ -1,0 +1,65 @@
+<html>
+	<head>
+		<title>Instrumix</title>
+		<style>
+			body{
+				background-image:url(images/plain.jpg);
+				background-repeat:no-repeat;
+				background-position:center;
+				height:100%;
+				width:100%;
+			}
+			#main{
+			}
+		</style>
+		<script type="text/javascript">
+			function f()
+			{
+				var a=document.form.un.value;
+				var b = document.form.pwd.value;
+				if(a==null||a==""||b==null||b=="")
+				{
+					alert('Required fields cannot be empty');
+					return false;
+				}
+				if(b.length<8)
+				{
+					alert('Password too short');
+					return false;
+				}
+				if(confirm('Are you sure you want to submit?'))
+				{
+					return true;
+				}
+				else
+				{
+					return false;
+				}
+				
+			}	
+			function f1()
+			{
+				document.getElementById("main").style.opacity="0.1";
+				document.getElementById("main").style.opacity="0.2";
+				document.getElementById("para").innerHTML="";
+			}
+		</script>
+	</head>
+	<body>
+		<h1 style="font-family:Times new roman; font-size:40; color:#47CBCB; text-shadow: 2px 2px #AFFAA8"><center>INSTRUMIX</center></h1>
+		<div id="main">
+		<div id="first" style="font-family:Times new roman; font-size:35; color:#47CBCB; text-shadow: 2px 2px #AFFAA8; opacity:0.8">&nbsp</nbsp>Enter your details to start playing:</div>
+		<center>
+			<form name="form" action="InstruMix.html" onSubmit="return f()" method="post" style="font-family:Times new roman; font-size:30; color:#47CBCB; text-shadow: 2px 2px #AFFAA8"/>
+			<fieldset height="200px" width="200px">
+			<legend>Register</legend>
+				Username:<input name="un" type="text" placeholder="username" style="font-family:Times new roman; font-size:30; color:#AFFAA8"/><br/><br/>
+				Password:<input name="pwd" type="password" placeholder="********" style="font-family:Times new roman; font-size:30; color:#AFFAA8"/><br/><br/>
+				<center><input value="Submit" style="font-family:Times new roman; font-size:30; color:#47CBCB; text-shadow: 2px 2px #AFFAA8" type="Submit" name="Submit"/></center>
+			</fieldset>
+			</form>
+			<a href="register.html" style="font-family:Times new roman; font-size:25; color:#47CBCB; text-shadow: 2px 2px #AFFAA8">New User? Sign up.</a>
+		</center>
+		</div>
+	</body>
+</html>
